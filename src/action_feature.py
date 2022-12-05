@@ -224,10 +224,12 @@ def action_table(sample, sample_id, batch_id):
 
 def save_action_csvs(data):
     batch_id = data['name']
-    print(batch_id, sample['name'], data['samples'])
+    print(batch_id, data['samples'])
     act_cols =  ['step_id','action','chemical_from','drop_air_gap','drop_blow_out','drop_height','drop_rate','spin_acc','spin_rpm','hp_duration','hp_temp','rest_duration','char_name','char_exposure time','char_duration','char_position','sample_id','batch_id']
     dfs = []
     for sample in data['samples']:
+        print(sample['name'])
+        print(sample)
         act = pd.DataFrame(action_table(sample, sample['name'], batch_id))
         df = act.astype({'chemical':'Int64'})
         dfs.append(df)
