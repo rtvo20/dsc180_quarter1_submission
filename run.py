@@ -4,6 +4,8 @@ import sys
 import os
 import json
 
+sys.path.insert(0, 'src')
+
 from etl import get_data, get_ids
 from chem_feature import *
 from action_feature import *
