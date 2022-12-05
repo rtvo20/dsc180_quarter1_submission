@@ -1,4 +1,4 @@
 {
-	"dockerhub-id": "rvo1/quarter1_project",
-	"build-script": "python run.py"
+    "dockerhub-id": "rvo1/quarter1_project",
+    "build-script": "python run.py"
 }
