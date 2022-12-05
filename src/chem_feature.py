@@ -11,7 +11,7 @@ def split_chemicals(input_string):
         result.append((i[:first_digit], float(i[first_digit:])))
     return result
 
-def flatten_chem(sample):
+def flatten_chem(sample, data):
     chem = pd.DataFrame(columns = ['chemical_id', 'batch_id', 'content', 'concentration', 
                                           'molarity', 'volume', 'type'])
     
@@ -87,6 +87,6 @@ def flatten_chem(sample):
 def save_chem_csvs(data):
     for sample in data['samples']:
         file_name = data['name'] + '_' + sample + '_' + 'chem.csv'
-        flatten_chem(data['samples'][sample]).to_csv(file_name, index=False)
+        flatten_chem(data['samples'][sample], data).to_csv(file_name, index=False)
     return
     
