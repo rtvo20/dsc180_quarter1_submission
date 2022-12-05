@@ -228,7 +228,7 @@ def save_action_csvs(data):
     act_cols =  ['step_id','action','chemical_from','drop_air_gap','drop_blow_out','drop_height','drop_rate','spin_acc','spin_rpm','hp_duration','hp_temp','rest_duration','char_name','char_exposure time','char_duration','char_position','sample_id','batch_id']
     dfs = []
     for sample in data['samples']:
-        act = pd.DataFrame(action_table(data['samples'][sample], sample, batch_id))
+        act = pd.DataFrame(action_table(data['samples'][sample], sample, batch_id), columns=act_cols)
         df = act.astype({'chemical_from':'Int64'})
         dfs.append(df)
         fname = batch_id + '_' + sample + '_action.csv'
