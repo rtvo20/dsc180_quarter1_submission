@@ -41,6 +41,7 @@ def main(targets):
         for sample in samples:
             sample_links = file_ids[file_ids['sample_id']==sample]
             temp_ids = []
+            print(sample_links)
             for i in [1, 0, 2]:
                 temp_ids.append(sample_links.iloc[i]['file_id'])
             ids.append(temp_ids)
