@@ -48,7 +48,7 @@ def main(targets):
         queries = []
         for s in ids:
             queries.append(query_maker(s[0], s[1], s[2]))
-        query_file(queries_list)
+        query_file(queries)
         
         os.system('docker run --name neo4j_session -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/test neo4j:latest')
         
