@@ -49,9 +49,9 @@ def main(targets):
             queries.append(query_maker(s[0], s[1], s[2]))
         query_file(queries)
         
-        os.system('docker run --name neo4j_session -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/test neo4j:latest')
+        # os.system('docker run --name neo4j_session -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/test neo4j:latest')
         
-        os.system('docker cp output.cypher neo4j_session:/graph_output.cypher')
+        # os.system('docker cp output.cypher neo4j_session:/graph_output.cypher')
         
     return
 
