@@ -1,11 +1,11 @@
 # Quarter 1 Project:
-This project uses data from David Fenning's SOLEIL lab that creates solar cell samples in order to clean and transform the data, which is originally stored in a JSON file. The cleaned/transformed data are then saved as CSVs that allow it to be graphed in a Graph DBMS, Neo4j. The purpose of this task is to organize the data so that it is queryable once graphed with Neo4j.
+This project uses data from David Fenning's SOLEIL lab that creates solar cell samples in order to clean and transform the data, which is originally stored in a JSON file. The cleaned/transformed data are then saved as CSVs that allow it to be imported and graphed in Neo4j, a Graph DBMS. The purpose of this task is to have a pipeline that can organize and transform the data so that it can be graphed in Neo4j and can be queried.
 
-This current iteration includes test data under test/testdata that is one sample of the data to show how our code works on "barebones" test data.
+This current iteration includes test data under test/testdata, which is one sample from some actual data to show how our code works on "barebones" test data.
 
-## To run the project, use run.py.
+## To run the project use run.py and follow the instructions below.
 
-* The filepaths to the data are already hard-coded and available under the folder "test/testdata".
+* The filepaths to the test data are already hard-coded and available under the folder "test/testdata".
 * The available targets for running ```python run.py <target>``` and the order of the targets are:
     * ```data```>```features```>```queries```
     * Alternatively, running the command ```python run.py test``` is equivalent to running each of the above targets sequentially.
