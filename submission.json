@@ -1,4 +1,4 @@
 {
-    "dockerhub-id": "rvo1/quarter1_project",
+    "dockerhub-id": "neo4j",
     "build-script": "python run.py"
 }
