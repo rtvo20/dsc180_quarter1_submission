@@ -18,6 +18,7 @@ This current iteration includes test data under test/testdata that is one sample
     * ```docker run --name neo4j_session -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/test neo4j:latest```
     * This browser is able to perform queries similar to SQL, but in Neo4j's graph query language instead, which will allow us to see the graphed data.
   * The next step is copying the "output.cypher" file into the docker container's root directory by running the following command in the local terminal
+    * If running locally, make sure to ```cd``` to the directory where "output.cypher" is located. Then:
     * ```docker cp output.cypher neo4j_session:/output.cypher```
   * Once this is done, in the docker container terminal run the following commands
     * ```cd /``` to change to the root directory
