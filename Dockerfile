@@ -24,7 +24,7 @@ USER root
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir pandas
+# RUN pip install --no-cache-dir pandas
 
 # Override command to disable running jupyter notebook at launch
 CMD ["/bin/bash"]
